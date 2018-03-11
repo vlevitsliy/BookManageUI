@@ -1,0 +1,1 @@
+export const ON_CLICK_AUTOR = 'ON_CLICK_AUTOR';
