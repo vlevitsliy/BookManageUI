@@ -49,14 +49,8 @@ class Scroll extends React.Component {
         let currentIndex = 0;
         const doc = document.documentElement;
         const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-        // x=100-a*100:b=(b-a):b*100;
         const maxHeight = document.getElementById('root').offsetHeight;
-        // const result = (maxHeight - top)*100/maxHeight;
         const result = maxHeight-top;
-        console.log("maxHeight-top", maxHeight-top);
-        console.log("top", top);
-        console.log("maxHeight", maxHeight);
-        console.log("result=", result);
         if (result<1000 && !this.props.isLoad && currentIndex !==this.props.nextIndex) {
             this.props.changePageCallBack(this.props.nextIndex);
         }
@@ -64,6 +58,11 @@ class Scroll extends React.Component {
     };
 
     render (){
+        if (!this.props.isLoad) {
+            return (
+                <div/>
+            );
+        }
         return (
             <div>Loading</div>
         );

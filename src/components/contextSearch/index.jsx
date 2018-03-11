@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {changeValue} from "./actions";
+import Styles from "./styles.css";
 
 const ContextSearch=(props)=>{
     return (
       <div>
-          <input type="text" value={props.searchValue} onChange={props.onChangeValue}/>
+          <input type="text" className="search" value={props.searchValue} onChange={props.onChangeValue}/>
       </div>
     );
 };
