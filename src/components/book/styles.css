@@ -1,0 +1,13 @@
+.book {
+    border:1px solid red;
+    padding-bottom: 10px;
+}
+
+.headerBook, .rowBook {
+    display: grid;
+    grid-template-columns: 600px 500px 200px;
+}
+
+.tableBook {
+    padding-left: 10px;
+}
