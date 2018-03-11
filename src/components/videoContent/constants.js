@@ -1,0 +1,1 @@
+export const VIDEO_ON_HOVER = 'VIDEO_ON_HOVER';
